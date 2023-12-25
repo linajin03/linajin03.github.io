@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home.js";
 import Navbar from "./Navigation/Navbar.js";
 import React from 'react';
-import Collapsible from './Pages/Collapsible.js';
+import Collapsible from './Components/Collapsible.js';
+import Footer from './Navigation/Footer.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Home />
         <Collapsible />
       </header>
+      <Footer />
       
     </div>
   );

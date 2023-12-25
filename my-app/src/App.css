@@ -81,16 +81,24 @@
 }
 
 .intro h3{
-  font-size: 1.3em;
+  font-size: .8em;
+  color: #919196;
+  font-weight: 400;
+}
+
+.intro h4{
+  font-size: 1.5em;
   color: #919196;
   font-weight: 400;
 }
 
 /* about me */
 .about-me{
+  padding-top: 10vh;
   text-align: left;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 80vh;
 }
 
 body {
@@ -174,4 +182,26 @@ body {
 
 .collapsible isExpanded .header{
   color: black;
+}
+
+.collapsible .title{
+  font-size: 1.5em;
+}
+
+/* footer */
+
+.footer{
+  background-color: #919196;
+  color: #F6F6F6;
+  font-size: 1.6rem;
+}
+
+
+.footer-text{
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.copyright{
+  font-size: 1.2rem;
 }

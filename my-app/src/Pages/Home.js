@@ -1,5 +1,6 @@
 import React from 'react';
-import Collapsible from './Collapsible';
+import Collapsible from '../Components/Collapsible';
+import TypingComponent from '../Components/TypingAnimation';
 
 const Home = () => {
     return (
@@ -9,7 +10,7 @@ const Home = () => {
                 <h2>Lina.</h2>
                 <div class ="below-intro">
                     <div class="intro-block">
-                        <a href="#collapsible">
+                        <a href="#about-me">
                             <div class="arrow">
                                 <span></span>
                                 <span></span>
@@ -20,13 +21,14 @@ const Home = () => {
                         
                     </div>
                     <div class="intro-block">
-                        <h3>i am an aspiring developer & avid creator.</h3>
-                        <h3>let's get to know each other!</h3>
+                        <h3><TypingComponent></TypingComponent></h3>
+                        {/* <h3>i am an aspiring developer & avid creator.</h3> */}
+                        <h4>let's get to know each other!</h4>
                     </div>
                 </div>
             </div>
 
-            <div className="about-me">
+            <div className="about-me" id="about-me">
                 <Collapsible title="education" defaultExpanded="true">
                     i am a current student at the University of Toronto, with a double major in Computer Science and Statistics looking to integrate a focus on artificial intelligence and psychology. i am interested in data, machine learning, neural networks, and deep learning. i am most confident working with Python, but i am also familiar with Java, R, SQL, HTML, CSS, TypeScript (Angular), and JavaScript (ReactJs).
                     <br/><br/>
