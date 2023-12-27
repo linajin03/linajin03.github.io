@@ -1,65 +1,41 @@
 import React from "react";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
-
-const Navbar = () => {
+function Navigation() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top" >
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+    <>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
+      <Container className="ms-20 me-20">
+        <Navbar.Brand href="#home"><img src="/Images/logo.png" alt="logo" width="50%" height="50" /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto navbar-font">
+            <Nav.Link href="https://www.linkedin.com/in/lina-jin-99b5121b0">Home</Nav.Link>
+            <Nav.Link href="https://www.linkedin.com/in/lina-jin-99b5121b0">Projects</Nav.Link>
+            <Nav.Link href="#archives">Archives</Nav.Link>
+          </Nav>
 
-      <div className="navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav me-auto">
-        <li className="nav-item">
-            <a className="nav-link" href="#">
-              <img src="/Images/logo.png" alt="logo" width="100%" height="50" />
-            </a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="./Pages/Home.js">
-              home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              projects
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              archives
-            </a>
-          </li>
-        </ul>
+          <Nav className="ms-auto navbar-font">
+            <Nav.Link href="https://www.linkedin.com/in/lina-jin-99b5121b0">LinkedIn</Nav.Link>
+            <Nav.Link href="https://github.com/linajin03">GitHub</Nav.Link>
+            <Nav.Link href="mailto:lina.jin@mail.utoronto.ca">Email</Nav.Link>
+            <Nav.Link href="#">Resume</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+      
 
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="https://www.linkedin.com/in/lina-jin-99b5121b0">
-              linkedin
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="https://github.com/linajin03">
-              github
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              email
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </Navbar>
+    </>
   );
 };
 
-export default Navbar;
+export default Navigation;

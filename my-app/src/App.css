@@ -14,12 +14,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #F6F6F6;
   min-height: 100vh;
@@ -44,20 +38,8 @@
 
 /* navbar */
 
-.navbar-bcg-black{
-  background-color: #F6F6F6;
-}
-
-.navbar{
-  margin-left: 10vw;
-  margin-right: 10vw;
+.navbar-font{
   font-size: 1.5em;
-}
-
-.navbar li{
-  display: inline;
-  margin-left: 3%;
-  margin-right: 3%;
 }
 
 /* home */
@@ -72,7 +54,7 @@
   font-size: 1.5em;
   color: #919196;
   font-weight: 400;
-  margin-top: 50vh;
+  margin-top: 40vh;
 }
 
 .intro h2{
@@ -98,7 +80,7 @@
   text-align: left;
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-bottom: 80vh;
+  margin-bottom: 30vh;
 }
 
 body {
@@ -106,10 +88,12 @@ body {
 }
 
 
+
 /* intro block */
 
 .below-intro{
   display: flex;
+  align-items: center;
 }
 
 .intro-block{
@@ -168,24 +152,94 @@ body {
   text-align: left;
   margin-left: 10%;
   margin-right: 10%;
-  
-  /* background-color: #eeeeee; */
 }
+
+@keyframes highlight {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: -100%;
+  }
+}
+
+.collapsible .content b {
+  animation-name: highlight;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  background-size: 200%;
+  background-image: linear-gradient(to right, #F6F6F6 50%, transparent 50%), 
+                    linear-gradient(transparent 50%, #81B3FF 50%);
+  font-weight: 500;
+}
+
+.collapsible .content a {
+  background: 
+    linear-gradient(to right, #919196, #919196),
+    linear-gradient(to right, #81B3FF, #81B3FF, #81B3FF);
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  text-decoration: none;
+  color: inherit;
+}
+
+.collapsible .content a:visited {
+  color: inherit;
+}
+  
+.collapsible .content .sdss-links{
+  text-align: center;
+}
+
+.collapsible .content .sdss-links a{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.collapsible .content a:hover,
+.collapsible .content a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
 .collapsible .header {
   /* background-color: #dddddd; */
   padding: 6px;
   cursor: pointer;
-  color:#919196;
+  /* color: #919196; */
   text-align: left;
   margin-left: 10%;
 }
 
-.collapsible isExpanded .header{
+.collapsible .header .gray{
+  color: #919196;
+}
+
+.collapsible .header .black{
   color: black;
 }
 
 .collapsible .title{
   font-size: 1.5em;
+}
+
+.collapsible .title-container{
+  display: flex;
+}
+
+.collapsible .title-container .icon{
+  height: 100%;
+  padding: 1%;
+}
+
+.collapsible .title-container .icon .gray{
+  color: #919196;
+}
+
+.collapsible .title-container .icon .black{
+  color: black;
 }
 
 /* footer */
