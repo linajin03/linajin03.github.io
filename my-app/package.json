@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://linajin03.github.io/linajin03.github.io/",
+  "homepage": "https://linajin03.github.io/linajin03.github.io/tree/main/my-app",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.92.7",
