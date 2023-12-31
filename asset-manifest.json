@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/linajin03.github.io/static/css/main.32aa392d.css",
-    "main.js": "/linajin03.github.io/static/js/main.59be19c2.js",
-    "static/js/787.d4aba7ab.chunk.js": "/linajin03.github.io/static/js/787.d4aba7ab.chunk.js",
-    "static/media/Outfit-VariableFont_wght.ttf": "/linajin03.github.io/static/media/Outfit-VariableFont_wght.00c2ed1a3bf798b0da27.ttf",
-    "static/media/logo.svg": "/linajin03.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/linajin03.github.io/index.html",
-    "main.32aa392d.css.map": "/linajin03.github.io/static/css/main.32aa392d.css.map",
-    "main.59be19c2.js.map": "/linajin03.github.io/static/js/main.59be19c2.js.map",
-    "787.d4aba7ab.chunk.js.map": "/linajin03.github.io/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/static/css/main.35a67dd4.css",
+    "main.js": "/static/js/main.d8c3c3a5.js",
+    "static/js/787.d4aba7ab.chunk.js": "/static/js/787.d4aba7ab.chunk.js",
+    "static/media/Outfit-VariableFont_wght.ttf": "/static/media/Outfit-VariableFont_wght.00c2ed1a3bf798b0da27.ttf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.35a67dd4.css.map": "/static/css/main.35a67dd4.css.map",
+    "main.d8c3c3a5.js.map": "/static/js/main.d8c3c3a5.js.map",
+    "787.d4aba7ab.chunk.js.map": "/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32aa392d.css",
-    "static/js/main.59be19c2.js"
+    "static/css/main.35a67dd4.css",
+    "static/js/main.d8c3c3a5.js"
   ]
 }
