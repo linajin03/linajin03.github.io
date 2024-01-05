@@ -2,6 +2,8 @@ import React from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import { NavLink } from 'react-router-dom';
+
 
 function Navigation() {
   return (
@@ -18,18 +20,18 @@ function Navigation() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto navbar-font">
-            <Nav.Link href="#home">home</Nav.Link>
-            <Nav.Link href="#about-me">about me</Nav.Link>
-            <Nav.Link href="#skills">skills</Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/in/lina-jin-99b5121b0">projects</Nav.Link>
-            <Nav.Link href="#archives">archives</Nav.Link>
+            <Nav.Link as={NavLink} to="/">home</Nav.Link>
+            <Nav.Link as={NavLink} href="#about-me">about me</Nav.Link>
+            <Nav.Link as={NavLink} href="#skills">skills</Nav.Link>
+            <Nav.Link as={NavLink} to="/projects">projects</Nav.Link>
+            <Nav.Link as={NavLink} to="/archives">archives</Nav.Link>
           </Nav>
 
           <Nav className="ms-auto navbar-font">
             <Nav.Link href="https://www.linkedin.com/in/lina-jin-99b5121b0">linkedin</Nav.Link>
             <Nav.Link href="https://github.com/linajin03">github</Nav.Link>
             <Nav.Link href="mailto:lina.jin@mail.utoronto.ca">email</Nav.Link>
-            <Nav.Link href="#">resume</Nav.Link>
+            {/* <Nav.Link href="#">resume</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

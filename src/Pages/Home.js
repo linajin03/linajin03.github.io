@@ -2,6 +2,7 @@ import React from 'react';
 import Collapsible from '../Components/Collapsible';
 import TypingComponent from '../Components/TypingAnimation';
 import MyTagCloud from '../Components/MyTagCloud';
+import BouncingWords from '../Components/BouncingWords';
 
 const Home = () => {
     return (
@@ -63,6 +64,9 @@ const Home = () => {
             </div>
             <div className='skills' id='skills'>
                 <h1>skills</h1>
+                <div className='bouncing-words' id='canvas'>
+                    <BouncingWords></BouncingWords>
+                </div>
                 <div className='tag-cloud'>
                     <MyTagCloud></MyTagCloud>
                 </div>
