@@ -60,6 +60,7 @@
 /* home */
 .intro{
   text-align: left;
+  margin-top: 30vh;
   /* height: 100vh; */
   margin-bottom: 50vh;
   font-family: 'MuseoModerno', sans-serif;
@@ -70,7 +71,6 @@
   font-size: 2.5em;
   color: black;
   font-weight: 500;
-  margin-top: 30vh;
 }
 
 .intro h2{
@@ -118,14 +118,19 @@ body {
 .below-intro{
   display: flex;
   align-items: center;
+  height: 10vh;
 }
 
 .intro-block{
   width: 50%;
-  padding:1rem;
+  margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
+  .intro{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+  }
   .below-intro {
     display: block;
   }
@@ -135,8 +140,12 @@ body {
   }
 }
 
-.intro-block a{
+.button-container a{
   text-decoration: none;
+}
+
+.button-container{
+  margin-top: 5vh;
 }
 
 .arrow-button {
@@ -150,21 +159,14 @@ body {
   font-weight: 500;
   cursor: pointer;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1em;
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
-  margin: 10px;
+  /* margin: 10px; */
+  margin: auto;
   padding: 15px 45px;
-  text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
 }
-
-@media only screen and (max-width: 600px) {
-  .arrow-button{
-    font-size: 1.5rem;
-  }
-}
-
 
 .arrow-button > .arrow {
   width: 10px;
@@ -209,6 +211,17 @@ body {
   color: #fff;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .arrow-button{
+    font-size: 1.5rem;
+  }
+
+  .arrow-button > .arrow {
+    display: none;
+  }
+}
+
 
 /* collapsible */
 

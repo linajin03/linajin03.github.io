@@ -18,20 +18,17 @@ const Home = () => {
         <div class="home" id="home">
             <div class="intro">
                 <h1>hello there, i'm lina.</h1>
-                <h2><TypingComponent></TypingComponent></h2>
                 <div class ="below-intro">
-                    <div class="intro-block">
-                    </div>
-                    <div class="intro-block">
-                        {/* <h3>let's get this party started.</h3> */}
-                        <a href="#about-me">
-                            <button class="arrow-button" onClick={()=>setIsLargeExploding(!isLargeExploding)} >
-                                {isLargeExploding && <ConfettiExplosion {...largeProps} />}
-                                let's get this party started.
-                                <span class="arrow"></span>
-                            </button>
-                        </a>
-                    </div>
+                    <h2><TypingComponent></TypingComponent></h2>
+                </div>
+                <div class="button-container">
+                    <a href="#about-me">
+                        <button class="arrow-button" onClick={()=>setIsLargeExploding(!isLargeExploding)} >
+                            {isLargeExploding && <ConfettiExplosion {...largeProps} />}
+                            let's get this party started.
+                            <span class="arrow"></span>
+                        </button>
+                    </a>
                 </div>
             </div>
 
