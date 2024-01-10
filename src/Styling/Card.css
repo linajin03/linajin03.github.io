@@ -1,3 +1,20 @@
+
+
+h1{
+    font-family: 'MuseoModerno', sans-serif;
+}
+
+.button{
+    font-family: 'MuseoModerno', sans-serif;
+    font-weight: 100;
+}
+
+.card-title{
+    font-family: 'MuseoModerno', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 .card-text{
     font-size: 1rem;
 }

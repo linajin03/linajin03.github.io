@@ -21,10 +21,8 @@ function Navigation() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto navbar-font">
             <Nav.Link as={NavLink} to="/">home</Nav.Link>
-            <Nav.Link as={NavLink} href="#about-me">about me</Nav.Link>
-            <Nav.Link as={NavLink} href="#skills">skills</Nav.Link>
             <Nav.Link as={NavLink} to="/projects">projects</Nav.Link>
-            <Nav.Link as={NavLink} to="/archives">archives</Nav.Link>
+            {/* <Nav.Link as={NavLink} to="/archives">archives</Nav.Link> */}
           </Nav>
 
           <Nav className="ms-auto navbar-font">

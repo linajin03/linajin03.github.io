@@ -1,12 +1,24 @@
 @font-face {
-  font-family: 'Outfit';
-  src: local('Outfit'), url(./Fonts/Outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+  font-family: 'MuseoModerno';
+  src: local('MuseoModerno'), url(./Fonts/MuseoModerno/MuseoModerno-Italic-VariableFont_wght.ttf) format('truetype');
+  /* src: local('MuseoModerno'), url(./Fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf) format('truetype'); */
 }
+
+@font-face {
+  font-family: 'Outfit';
+  src: url(./Fonts/Outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+}
+
+/* @font-face {
+  font-family: 'MuseoModerno';
+  src: url();
+} */
 
 .App {
   text-align: center;
   font-family: 'Outfit', sans-serif;
   background-color: #F6F6F6;
+  overflow: hidden;
 }
 
 
@@ -42,31 +54,36 @@
 
 .navbar-font{
   font-size: 1.5em;
+  font-family: 'Outfit', sans-serif;
 }
 
 /* home */
 .intro{
-  text-align: right;
+  text-align: left;
   /* height: 100vh; */
-  margin-bottom: 20vh;
+  margin-bottom: 50vh;
+  font-family: 'MuseoModerno', sans-serif;
+  
 }
 
 .intro h1{
-  font-size: 1.5em;
-  color: #919196;
-  font-weight: 400;
-  margin-top: 40vh;
+  font-size: 2.5em;
+  color: black;
+  font-weight: 500;
+  margin-top: 30vh;
 }
 
 .intro h2{
-  font-weight: 700;
-  font-size: 3em;
+  font-weight: 500;
+  font-size: .8em;
 }
 
 .intro h3{
-  font-size: .8em;
-  color: #919196;
-  font-weight: 400;
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  color: black;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .intro h4{
@@ -87,6 +104,7 @@
   color: black;
   font-weight: 500;
   text-align: center;
+  font-family: 'MuseoModerno', sans-serif;
 }
 
 body {
@@ -107,58 +125,97 @@ body {
   padding:1rem;
 }
 
-@media only screen and (max-width: 480px) {
-  .arrow{
-    display: none;
-  
+@media only screen and (max-width: 600px) {
+  .below-intro {
+    display: block;
+  }
+
+  .intro-block{
+    width: 100%;
   }
 }
 
-.arrow {
-  margin-left: 95%;
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%; */
-  transform: translate(-50%, -50%);
-  transform: rotate(0deg);
+.intro-block a{
+  text-decoration: none;
+}
+
+.arrow-button {
+  width: fit-content;
+  display: flex;
+  color: white;
+  /* background-color: #00E692; */
+  padding: 10px 16px;
+  border-radius: 50px;
+  transition: all .3s ease;
+  font-weight: 500;
   cursor: pointer;
+  align-items: center;
+  font-size: 2rem;
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
 }
 
-.arrow span {
-  display: block;
-  width: 1.5vw;
-  height: 1.5vw;
-  border-bottom: 5px solid #919196;
-  border-right: 5px solid #919196;
+@media only screen and (max-width: 600px) {
+  .arrow-button{
+    font-size: 1.5rem;
+  }
+}
+
+
+.arrow-button > .arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  position: relative;
   transform: rotate(45deg);
-  margin: -10px;
-  animation: animate 2s infinite;
+  margin-left: 15px;
+  transition: all .3s ease;
 }
 
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
+.arrow-button > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 20px;
+  transform-origin: bottom right;
+  height: 4px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-5.5px / 2);
+  transform: rotate(45deg);
+  transition: all .3s ease;
+  content: "";
+  right: 0;
 }
 
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
+.arrow-button:hover > .arrow {
+  transform: rotate(45deg) translate(6px, 6px);
+  border-color: text-hover-color;
 }
 
-@keyframes animate {
-  0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
-  }
+.arrow-button:hover > .arrow::before {
+  opacity: 1;
+  width: 20px;
 }
 
+.arrow-button:hover {
+  /* background-color: #017A4F; */
+  color: #fff;
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
 
 /* collapsible */
+
+.collapsible .title-container{
+  font-family: 'MuseoModerno', sans-serif;
+  font-weight: 600;
+}
 
 .collapsible .content {
   padding: 6px;
@@ -268,9 +325,11 @@ body {
   font-weight: 500;
   text-align: center;
   padding-top: 10vh;;
+  font-family: "MuseoModerno", sans-serif;
 }
 
 .tag-cloud{
+  font-family: 'MuseoModerno', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

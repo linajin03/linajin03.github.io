@@ -4,7 +4,7 @@ import ProjectData from "../Data/Projects";
 const Buttons = ({ setItem, projectItems, filterItem }) => {
     return (
         <>
-          <div className="d-flex justify-content-left">
+          <div className="d-flex justify-content-left button ">
           <button
               className="btn-light text-black border-dark border-2 p-1 px-3 mx-2 fw-bold btn"
               onClick={() => setItem(ProjectData)}

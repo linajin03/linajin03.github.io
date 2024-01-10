@@ -3,27 +3,34 @@ import Collapsible from '../Components/Collapsible';
 import TypingComponent from '../Components/TypingAnimation';
 import MyTagCloud from '../Components/MyTagCloud';
 import BouncingWords from '../Components/BouncingWords';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 const Home = () => {
+    const [isLargeExploding, setIsLargeExploding] = React.useState(false);
+    const largeProps: ConfettiProps = {
+        force: 0.8,
+        duration: 3000,
+        particleCount: 300,
+        width: 1600,
+        colors: ['#041E43', '#1471BF', '#5BB4DC', '#FC027B', '#66D805'],
+      };
     return (
         <div class="home" id="home">
             <div class="intro">
-                <h1>hi, my name is</h1>
-                <h2>Lina.</h2>
+                <h1>hello there, i'm lina.</h1>
+                <h2><TypingComponent></TypingComponent></h2>
                 <div class ="below-intro">
                     <div class="intro-block">
-                        <a href="#about-me">
-                            <div class="arrow">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </a>
-
                     </div>
                     <div class="intro-block">
-                        <h3><TypingComponent></TypingComponent></h3>
-                        <h4>let's get to know each other!</h4>
+                        {/* <h3>let's get this party started.</h3> */}
+                        <a href="#about-me">
+                            <button class="arrow-button" onClick={()=>setIsLargeExploding(!isLargeExploding)} >
+                                {isLargeExploding && <ConfettiExplosion {...largeProps} />}
+                                let's get this party started.
+                                <span class="arrow"></span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -39,12 +46,13 @@ const Home = () => {
                 <Collapsible title="creation">
                     as much as i love proofs and theory, i grew up with a strong background in visual arts, so i constantly look for ways i can create. whether it’s <b>software development, painting, drawing, or cooking</b>, i love to find different ways to exhibit my creativity and passions. in my free time, i love to share my stories through cooking. <a>check it out</a>!
                     <br/><br/>
+                    i find my creativity through reading and collaborating with others. i love listening to other people's stories and learning more about our world and the people that live in it. building a career in technology, i hope to create a more inclusive and accessible world for everyone.
+                    <br/><br/>
                 </Collapsible>
-                <Collapsible title="as of lately" collapsedHeight="32">
+                <Collapsible title="current status" collapsedHeight="32">
                     i just finished my 8-month co-op term with the <b>Ministry of Community, Children, and Social Social Services (MCCSS)</b> as a Business Analyst, where our focus is to provide <b>more accessible, reliable healthcare and programs</b> to children and youth with special needs through technology and data.
                     <br></br><br></br>
-                    within the UofT community, i co-founded <b>Students in Data Science and Statistics (SDSS)</b>.
-                    leading over <b>20+ execs</b>, our team is actively working to provide support and resources to <b>200+ general members</b> for students interested in data science and statistics. Check it out here:
+                    within the UofT community, i co-founded <b>Students in Data Science and Statistics (SDSS)</b>. Check it out here:
                     <br></br>
                     <div class="sdss-links">
                         <a href="https://www.instagram.com/SDSSUofT">Instagram</a>
@@ -53,13 +61,13 @@ const Home = () => {
                     </div>
 
                     <br></br>
-                    i am also working with UofT's <b>Women in Science and Engineering (WISE)</b> on the Conference Team, planning WISE's annual 2-day national conference for <b>400+ attendees</b>, packed with keynote speakers, workshops, panels, competitions, and networking opportunities. we seek to support women and non-binary students in STEM throughout Canada.
+                    i am also working with UofT's <b>Women in Science and Engineering (WISE)</b> on the Conference Team, planning WISE's annual <a href="https://conference.wiseuoft.org/">2-day conference</a>.
                     <br></br>
-                    <div class="sdss-links">
-                        <a href="https://conference.wiseuoft.org/">WISENC Website</a>
-                    </div>
                     <br></br>
-                    want to learn more about my initatives? check out my <a>archives</a>, my <a>resume</a>, or <a>let's connect</a>!
+                    other than that, i am currently reading human acts by han kang and rewatching stranger things. 
+                    <br></br>
+                    <br></br>
+                    want to learn more about my initatives? <a href="https://www.linkedin.com/jin-lina">let's connect</a>!
                 </Collapsible>
             </div>
             <div className='skills' id='skills'>
