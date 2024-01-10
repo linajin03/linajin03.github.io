@@ -146,6 +146,14 @@ body {
 
 .button-container{
   margin-top: 5vh;
+  margin-left: 30vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .button-container{
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
 
 .arrow-button {
@@ -159,7 +167,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   align-items: center;
-  font-size: 1em;
+  font-size: 1.5em;
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
   /* margin: 10px; */
   margin: auto;
