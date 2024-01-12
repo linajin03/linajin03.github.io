@@ -25,7 +25,7 @@ const Home = () => {
                     <a href="#about-me">
                         <button class="arrow-button" onClick={()=>setIsLargeExploding(!isLargeExploding)} >
                             {isLargeExploding && <ConfettiExplosion {...largeProps} />}
-                            let's get this party started.
+                            let's get this party started
                             <span class="arrow"></span>
                         </button>
                     </a>
