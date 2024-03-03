@@ -3,6 +3,7 @@ import { TagCloud } from 'react-tagcloud'
 
 const data = [
   { value: 'JavaScript', count: 40 },
+  { value: 'C', count: 40 },
   { value: 'React.js', count: 40 },
   { value: 'HTML', count: 43 },
   { value: 'CSS', count: 45 },
@@ -10,7 +11,7 @@ const data = [
   { value: 'TypeScript', count: 35 },
   { value: 'Python', count: 45 },
   { value: 'Java', count: 40 },
-  { value: 'mySQL', count: 35 },
+  { value: 'SQL', count: 40 },
   { value: 'R', count: 40 },
 ]
 

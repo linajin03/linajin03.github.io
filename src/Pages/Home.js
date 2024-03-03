@@ -3,17 +3,17 @@ import Collapsible from '../Components/Collapsible';
 import TypingComponent from '../Components/TypingAnimation';
 import MyTagCloud from '../Components/MyTagCloud';
 import BouncingWords from '../Components/BouncingWords';
-import ConfettiExplosion from 'react-confetti-explosion';
+// import ConfettiExplosion from 'react-confetti-explosion';
 
 const Home = () => {
-    const [isLargeExploding, setIsLargeExploding] = React.useState(false);
-    const largeProps: ConfettiProps = {
-        force: 0.8,
-        duration: 3000,
-        particleCount: 300,
-        width: 1600,
-        colors: ['#041E43', '#1471BF', '#5BB4DC', '#FC027B', '#66D805'],
-      };
+    // const [isLargeExploding, setIsLargeExploding] = React.useState(false);
+    // const largeProps: = {
+    //     force: 0.8,
+    //     duration: 3000,
+    //     particleCount: 300,
+    //     width: 1600,
+    //     colors: ['#041E43', '#1471BF', '#5BB4DC', '#FC027B', '#66D805'],
+    //   };
     return (
         <div class="home" id="home">
             <div class="intro">
@@ -23,8 +23,9 @@ const Home = () => {
                 </div>
                 <div class="button-container">
                     <a href="#about-me">
-                        <button class="arrow-button" onClick={()=>setIsLargeExploding(!isLargeExploding)} >
-                            {isLargeExploding && <ConfettiExplosion {...largeProps} />}
+                        <button class="arrow-button" >
+                        {/* <button class="arrow-button" onClick={()=>setIsLargeExploding(!isLargeExploding)} > */}
+                            {/* {isLargeExploding && <ConfettiExplosion {...largeProps} />} */}
                             let's get this party started
                             <span class="arrow"></span>
                         </button>
@@ -37,11 +38,21 @@ const Home = () => {
                     <h1>about me</h1>
                 </div>
                 <Collapsible title="education" defaultExpanded="true" >
-                    i am a current student at the <b>University of Toronto</b>, with a double major in <b>Computer Science and Statistics</b> looking to integrate a focus on <b>artificial intelligence and computer systems</b>. i am interested in data, machine learning, neural networks, and deep learning. i am most confident working with Python, but i am also familiar with Java, R, SQL, HTML, CSS, TypeScript (Angular), and JavaScript (ReactJs). Learn more about my experience through my <a>projects</a> or my <a>resume</a>.
+                    i am a current student at the <b>University of Toronto</b>, with a double major in <b>Computer Science and Statistics</b> looking to integrate a focus on <b>artificial intelligence and computer systems</b>. i am interested in data, machine learning, neural networks, and deep learning. i am most confident working with Python, but i am also familiar with Java, R, SQL, HTML, CSS, TypeScript (Angular), and JavaScript (ReactJs).
+                    <br/><br/>
+                    current and past courses:
+                    <ul>
+                        <li> - Data Structures and Analysis</li>
+                        <li> - Probability and Statistics</li>
+                        <li> - Software Tools and Systems Programming (C)</li>
+                        <li> - Software Design</li>
+                        <li> - Mathematical Expression and Reasoning for Computer Science</li>
+                    </ul>
                     <br/><br/>
                 </Collapsible>
+
                 <Collapsible title="creation">
-                    as much as i love proofs and theory, i grew up with a strong background in visual arts, so i constantly look for ways i can create. whether it’s <b>software development, painting, drawing, or cooking</b>, i love to find different ways to exhibit my creativity and passions. in my free time, i love to share my stories through cooking. <a>check it out</a>!
+                    as much as i love proofs and theory, i grew up with a strong background in visual arts, so i constantly look for ways i can create. whether it’s <b>software development, painting, drawing, or cooking</b>, i love to find different ways to exhibit my creativity and passions. in my free time, i love to share my stories through cooking. <a href="https://www.instagram.com/ljsaysyumm">check it out</a>!
                     <br/><br/>
                     i find my creativity through reading and collaborating with others. i love listening to other people's stories and learning more about our world and the people that live in it. building a career in technology, i hope to create a more inclusive and accessible world for everyone.
                     <br/><br/>

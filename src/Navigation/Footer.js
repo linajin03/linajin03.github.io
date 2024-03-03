@@ -16,7 +16,7 @@ const Footer = () => {
             Thank you for getting to know me!
           </p>
           <p>
-          Let's connect! Feel free to reach out to me through email or LinkedIn.
+          Let's connect! Feel free to reach out to me through <a href="mailto:lina.jin@mail.utoronto.ca">email</a> or <a href="https://www.linkedin.com/jin-lina">LinkedIn</a>.
           </p>
         </section>
 
