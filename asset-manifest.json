@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.9eb02350.css",
-    "main.js": "/static/js/main.826ff285.js",
+    "main.js": "/static/js/main.9eae32e0.js",
     "static/js/787.d4aba7ab.chunk.js": "/static/js/787.d4aba7ab.chunk.js",
     "static/media/MuseoModerno-Italic-VariableFont_wght.ttf": "/static/media/MuseoModerno-Italic-VariableFont_wght.00b9aa8db90aa81f130f.ttf",
     "static/media/Outfit-VariableFont_wght.ttf": "/static/media/Outfit-VariableFont_wght.00c2ed1a3bf798b0da27.ttf",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.9eb02350.css.map": "/static/css/main.9eb02350.css.map",
-    "main.826ff285.js.map": "/static/js/main.826ff285.js.map",
+    "main.9eae32e0.js.map": "/static/js/main.9eae32e0.js.map",
     "787.d4aba7ab.chunk.js.map": "/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9eb02350.css",
-    "static/js/main.826ff285.js"
+    "static/js/main.9eae32e0.js"
   ]
 }
