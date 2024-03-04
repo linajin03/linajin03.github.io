@@ -43,6 +43,7 @@ const Home = () => {
                     current and past courses:
                     <ul>
                         <li> - Data Structures and Analysis</li>
+                        <li> - Introduction to Databases (SQL)</li>
                         <li> - Probability and Statistics</li>
                         <li> - Software Tools and Systems Programming (C)</li>
                         <li> - Software Design</li>
