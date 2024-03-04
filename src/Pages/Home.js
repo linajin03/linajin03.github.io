@@ -75,7 +75,7 @@ const Home = () => {
                     other than that, i am currently reading human acts by han kang and rewatching stranger things. 
                     <br></br>
                     <br></br>
-                    want to learn more about my initatives? <a href="https://www.linkedin.com/jin-lina">let's connect</a>!
+                    want to learn more about my initatives? <a href="https://www.linkedin.com/in/lina-jin-99b5121b0/">let's connect</a>!
                 </Collapsible>
             </div>
             <div className='skills' id='skills'>
