@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+.orange {
+    /* FFAA33 */
+    color: #FFAA33;
+}
+
+.orange-hover {
+    /* FFA500 */
+    color: #FFA500;
+
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+b {
+    font-weight: 400;
+}
+
+.blue {
+    /* 0077FF */
+    color: #4BA2EB;
+}
+
+.font-korean {
+    font-family: 'Noto Serif KR Variable', serif;
+}
+
+.instrument-serif {
+    font-family: 'Instrument Serif', serif;
+}
+
+.instrument-serif-bold {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 700;
+}
+.instrument-serif-italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+}   
+
+.instrument-sans {
+    font-family: 'Instrument Sans', sans-serif;
+}
+.instrument-sans-bold {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+}
+.instrument-sans-italic {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+.bg-offwhite {
+    background-color: #FAF8F4;
+}

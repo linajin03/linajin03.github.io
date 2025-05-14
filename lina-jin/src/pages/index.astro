@@ -1,0 +1,23 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import "../styles/global.css";
+import '@fontsource/instrument-serif';
+import '@fontsource-variable/noto-serif-kr'
+import '@fontsource-variable/instrument-sans';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+<meta charset="UTF-8">
+<head>
+
+</head>
+<body>
+<Navbar />
+<main class="bg-[url('../assets/home/Checkered.jpg')] bg-cover bg-no-repeat bg-bottom">
+	<Welcome />
+</main>
+</body>
+

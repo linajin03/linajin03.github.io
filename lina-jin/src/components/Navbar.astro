@@ -1,0 +1,71 @@
+---
+// Navbar.astro
+import Logo from '../assets/logo.svg';
+
+const navItems = [
+  { name: 'projects', href: '/projects' },
+  { name: 'currently', href: '/currently'},
+  { name: 'diary', href: '/diary' },
+  { name: 'cooking', href: '/cooking' },
+  { name: 'contact', href: '/contact' },
+];
+---
+
+<nav class="bg-offwhite">
+  <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between lg:h-30 h-50 items-center">
+    <div class="flex items-center space-x-4">
+        <div class="h-full flex items-center">
+            <a href="/" class="flex items-center">
+                <Logo class="lg:h-16 h-36 w-auto" />
+            </a>
+        </div>
+        </div>
+
+      <div class="hidden lg:flex space-x-4">
+        {navItems.map(item => (
+          <a href={item.href} class="instrument-serif-italic orange hover:orange-hover px-3 py-2 rounded-md text-2xl">
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="lg:hidden">
+        <button id="mobile-menu-button" class="orange hover:hover-orange focus:outline-none">
+          <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="transition-all duration-400 ease-in-out lg:hidden max-h-0 overflow-hidden px-4 pb-4 space-y-1">
+    {navItems.map(item => (
+      <a href={item.href} class="block orange hover:orange-hover px-6 py-6 instrument-serif-italic rounded-md text-6xl">
+        {item.name}
+      </a>
+    ))}
+  </div>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        if (menu) {
+          if (menu.classList.contains('max-h-0')) {
+            menu.classList.remove('max-h-0');
+            menu.classList.add('max-h-screen'); // Allow it to expand
+          } else {
+            menu.classList.add('max-h-0');
+            menu.classList.remove('max-h-screen'); // Collapse it
+          }
+        }
+      });
+    }
+  </script>
+</nav>

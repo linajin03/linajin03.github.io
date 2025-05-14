@@ -1,0 +1,84 @@
+---
+import self from '../assets/home/home-lina.png';
+import photobooth from '../assets/home/photobooth.png';
+import projects from '../assets/home/projects.png';
+import cooking from '../assets/home/cooking.png';
+import diary from '../assets/home/diary.png';
+import currently from '../assets/home/currently.png';
+import contact from '../assets/home/contact.png';
+
+const navItems = [
+  { name: ' projects ', href: '/projects', img: projects.src },
+  { name: ' cooking ', href: '/cooking', img: cooking.src },
+  { name: ' diary ', href: '/diary', img: diary.src },
+  { name: ' currently ', href: '/currently', img: currently.src },
+  { name: ' contact ', href: '/contact', img: contact.src },
+];
+---
+<div id="container" class="min-h-screen">
+	<main class="min-h-screen flex items-start justify-start p-16">
+		<div class="flex flex-col">
+			<div class="flex">
+				<div class="lg:w-3/4">
+					<div class="name-section orange">
+						<div class="flex h-32">
+							<div class="name flex items-center justify-center">
+								<h1 class="instrument-serif">
+									Lina Jin
+								</h1>
+							</div>
+							<div class="flex flex-col ml-8 lg:text-2xl text-4xl h-full justify-center ">
+								<div class="flex">
+									<div class="font-korean">진 陳 </div><div class="instrument-serif-italic">(jeen) - truth</div>
+								</div>
+								<div class="flex">
+									<div class="font-korean">리 利 </div><div class="instrument-serif-italic">(lee) - logic</div>
+								</div>
+								<div class="flex">
+									<div class="font-korean">나 那 </div><div class="instrument-serif-italic">(nah) - self</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bio-section">
+						<div class="lg:hidden block blue text-6xl instrument-sans-italic w-2/3 pt-16">hi, my name is lina!</div>
+						<div class="flex">
+							<div class="lg:hidden block blue text-5xl instrument-sans-italic w-2/3 mr-6 mt-16">i am a developer, artist, data-enthusiast, and homecook with a <b>HBSc in Computer Science and Statistical Sciences</b> from the University of Toronto. </div>
+							<div class="lg:w-1/3"><img src={self.src} alt="Lina Jin" class="self-image h-auto w-auto"/></div>
+							
+							<p class="hidden lg:block blue instrument-sans-italic w-2/3 pt-16">
+								hi, my name is lina! 
+								<br/><br/>
+								i am a developer, artist, data-enthusiast, and homecook with a <b>HBSc in Computer Science and Statistical Sciences</b> from the University of Toronto. 
+								<br/><br/>
+								welcome to my digital scrapbook of my <b>creations</b>, <b>stories</b>, <b>dreams</b>, <b>inspirations</b>, and <b>more</b>.
+							</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="hidden lg:flex lg:w-1/4">
+					<img src={photobooth.src} alt="Photobooth" class="p-8"/>
+				</div>
+			</div>
+			<div class="lg:hidden">
+				<div class="flex">
+					<img src={photobooth.src} alt="Photobooth" class=""/>
+					<div class="lg:hidden blue text-6xl instrument-sans-italic pt-16 m-6">welcome to my digital scrapbook of my <b>creations</b>, <b>stories</b>, <b>dreams</b>, <b>inspirations</b>, and <b>more</b>.</div>
+				</div>
+			</div>
+			<div class="lg:flex hidden">
+				{navItems.map(item => (
+					<a href={item.href} class="instrument-serif-italic orange hover:orange-hover px-3 py-2 rounded-md text-2xl">
+						<div class="flex flex-col items-center">
+							<img src={item.img} alt={item.name} class=" w-full h-auto transform transition-transform duration-300 hover:rotate-5"/>
+							<div class="bg-white p-2 rounded-full">{ item.name }</div>
+						</div>
+					</a>
+				  ))}
+			</div>
+		</div>
+	</main>
+
+</div>
+
