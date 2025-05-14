@@ -2,9 +2,11 @@
   "name": "lina-jin",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://linajin03.github.io",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && gh-pages -d dist",
+    "deploy": "astro build && gh-pages -d dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -18,6 +20,7 @@
     "postcss": "^8.5.3"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.6"
   }
 }
