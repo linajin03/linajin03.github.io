@@ -5,8 +5,8 @@
   "homepage": "https://linajin03.github.io",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && gh-pages -d dist",
-    "deploy": "astro build && gh-pages -d dist",
+    "build": "astro build",
+    "deploy": "astro build && git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin main",
     "preview": "astro preview",
     "astro": "astro"
   },
