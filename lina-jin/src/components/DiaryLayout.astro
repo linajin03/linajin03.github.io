@@ -1,0 +1,53 @@
+---
+import { diaryPosts } from '../data/diaryPosts.js';
+
+const postsPerPage = 5; // Number of posts per page
+const currentPage = Number(Astro.url.searchParams.get('page')) || 1; // Get the current page from the URL
+const totalPages = Math.ceil(diaryPosts.length / postsPerPage); // Calculate total pages
+
+// Calculate the posts to display for the current page
+const startIndex = (currentPage - 1) * postsPerPage;
+const endIndex = startIndex + postsPerPage;
+const postsToShow = diaryPosts.slice().reverse().slice(startIndex, endIndex); // Reverse and paginate
+---
+<main class="bg-offwhite p-8">
+  <div class="text-6xl instrument-serif-italic mb-2">my diary</div>
+  <ul class="space-y-4">
+    {postsToShow.map(post => (
+      <>
+        <hr class="border-t border-gray-300 my-4" />
+        <div class="flex items-center space-x-4 ml-auto mr-auto justify-center">
+          <li class="p-4 w-2/3">
+            <a href={post.url} class="text-3xl instrument-sans text-black hover:underline">{post.title}</a>
+            <div class="text-gray-600 instrument-sans-italic">{post.subtitle}</div>
+            <small class="text-gray-500">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</small>
+            <div class="flex space-x-2 mt-2">
+              {post.tags.map(tag => (
+                <span class="bg-orange text-white px-2 py-1 rounded-full text-sm">{tag}</span>
+              ))}
+            </div>
+          </li>
+          <div class="image-container w-1/3">
+            <img src={post.thumbnail.src} alt={post.title} class="image-cover" />
+          </div>
+        </div>
+        
+      </>
+    ))}
+  </ul>
+
+  <!-- Pagination -->
+  <div class="flex justify-center mt-8 space-x-4">
+    {Array.from({ length: totalPages }).map((_, index) => {
+      const page = index + 1;
+      return (
+        <a
+          href={`?page=${page}`}
+          class={`px-4 py-2 rounded-md ${page === currentPage ? 'text-black' : 'bg-gray-200 text-black hover:bg-gray-300'}`}
+        >
+          {page}
+        </a>
+      );
+    })}
+  </div>
+</main>

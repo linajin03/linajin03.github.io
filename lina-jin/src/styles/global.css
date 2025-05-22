@@ -48,6 +48,11 @@ b {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 700;
 }
+
+.sans-bold {
+    font-weight: 700;
+}
+
 .instrument-sans-italic {
     font-family: 'Instrument Sans', sans-serif;
     font-style: italic;
@@ -60,4 +65,29 @@ p {
 
 .bg-offwhite {
     background-color: #FAF8F4;
+}
+
+.bg-orange {
+    background-color: #FFAA33;
+}
+
+.dark-orange {
+    color: #AC7222;
+}
+
+.image-container {
+    width: 400px; /* Set the width of the container */
+    height: 200px; /* Set the height of the container */
+    border-radius: 20px; /* Makes the container a circle */
+    overflow: hidden; /* Ensures the image is cropped to the container's shape */
+    position: relative;
+}
+  
+.image-cover {
+    width: 100%; /* Make the image fill the container's width */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
 }

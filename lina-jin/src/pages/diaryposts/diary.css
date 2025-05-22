@@ -1,0 +1,33 @@
+.image-container-may-2025 {
+    position: relative; /* Establishes a positioning context for the overlay text */
+    width: 100%; /* Ensure the container spans the full width */
+    height: auto; /* Adjust height as needed */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the element's size */
+    text-align: center; /* Center the text */
+    z-index: 2; /* Ensure the text is above the image */
+}
+
+.overlay-image-row {
+    justify-content: center; /* Centers the images horizontally */
+    gap: 8rem; /* Adds spacing between the images */
+    height: 100%; /* Ensures the row takes the full height of the container */
+}
+
+.overlay-image-row img {
+    
+    object-fit: contain; /* Ensures the images maintain their aspect ratio */
+}
+
+.overlay-image-row div {
+    text-align: center; /* Centers the text below each image */
+}
+
+.shadow {
+    box-shadow: -17px 17px 4px rgba(0, 0, 0, 0.25); /* x-offset, y-offset, blur, opacity */
+}

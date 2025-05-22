@@ -1,0 +1,172 @@
+---
+import "../../../styles/global.css";
+import "../diary.css";
+import '@fontsource/instrument-serif';
+import '@fontsource-variable/noto-serif-kr'
+import '@fontsource-variable/instrument-sans';
+import Navbar from "../../../components/Navbar.astro";
+import DiaryLayout from "../../../components/DiaryLayout.astro";
+import first from "../../../assets/diary/currently-may-2025/first.png";
+import second from "../../../assets/diary/currently-may-2025/second.png";
+import third from "../../../assets/diary/currently-may-2025/third.png";
+import miffy from "../../../assets/diary/currently-may-2025/miffy.jpg";
+import pachinko from "../../../assets/diary/currently-may-2025/pachinko.jpg";
+import sincerely from "../../../assets/diary/currently-may-2025/sincerely.jpg";
+import theidiot from "../../../assets/diary/currently-may-2025/theidiot.jpg";
+import background from "../../../assets/diary/currently-may-2025/background.jpg";
+
+---
+<meta charset="UTF-8">
+<head>
+
+</head>
+<body class="bg-offwhite">
+<Navbar />
+
+<main class=" bg-no-repeat bg-offwhite" style={`background-image: url(${background.src}); height: 400px;`}>
+    <div class="image-container-may-2025 pt-8 lg:pt-4">
+        <!-- <img src={background.src} alt="first" class="mb-8 background-image-may-2025 h-1/2" /> -->
+        <div class="text-right instrument-sans orange text-4xl mr-50">
+            MAY 2025
+         </div>
+        <div class="orange text-6xl instrument-sans-italic sans-bold w-2/3 mt-60 pb-4 pl-8 text-left" style="background-color: rgba(255, 255, 255, 0.8);">
+            currently...
+        </div>
+        <div class="flex flex-col lg:flex-row dark-orange text-3xl instrument-serif-italic justify-start items-center pt-10 overlay-image-row">
+            <div class="flex flex-row lg:flex-col items-center gap-4">
+                <img src={pachinko.src} alt="pachinko" class="mb-4 shadow h-2/3" />
+                <div class="text-left">
+                    Pachinko on Apple Tv
+                </div>
+            </div>
+            <div class="flex flex-row lg:flex-col items-center gap-4">
+                <img src={sincerely.src} alt="sincerely" class="mb-4 w-full shadow" />
+                <div class="text-left">
+                    Sincerely, by Kali Uchis
+                </div>
+            </div>
+            <div class="flex flex-row lg:flex-col items-center gap-4">
+                <img src={theidiot.src} alt="the idiot" class="mb-4 shadow h-2/3" />
+                <div class="text-left">
+                    The Idiot by Elif Batuman
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="orange text-5xl instrument-sans-italic w-2/3 pt-24 pb-4 pl-12 text-left">
+            may 2025 favourites
+        </div>
+        <div class="hidden lg:flex flex-col h-screen ml-24 mr-24 instrument-serif-italic dark-orange text-2xl">
+            <div class="flex flex-wrap">
+                <!-- Left Column -->
+                <div class="flex flex-col flex-1">
+                  <div class="flex-1">
+                    <img src={second.src} alt="second" class="h-full w-auto object-contain" />
+                  </div>
+                </div>
+              
+                <!-- Right Column -->
+                <div class="flex flex-col pl-12 pr-12 flex-[2]">
+                  <div class="flex-1">
+                    1. Olympus XA2 Film Camera <br />
+                    I upgraded my Olympus Trip XB AP 44 to a Olympus XA2 after some researching online, and the camera is very nice! I’ve uploaded the pictures I took here, I focused on more still life pictures this time and I think it shows Toronto’s spring in such a beautiful life!               
+                  </div>
+                  <div class="flex flex-row flex-1">
+                    <div class="flex flex-col flex-1">
+                        <div class="flex-1 pt-10">
+                            2. Peugeot Pepper Mill <br />I’ve recently broken my glass grocery store pepper mill and decided to invest in a nicer, wooden one. It’s a bit of an investment but i know i’ll keep it for a long time! nothing like cooking with a smooth mill for pepper, it’s very satisfying.
+                        </div>
+                        <div class="flex-1">
+                            3. Japanese Breakfast/Concerts at Massey Hall <br />
+                            Japanese Breakfast’s concert set for her “For Melancholy Brunettes and Sad Women tour” had an oceanic/sailor theme and it was so beautiful! Massey Hall is one of my favourite venues-- you can see the artist pretty well virtually anywhere you sit. This was my first time standing in the GA area and it was very nice-- and this is coming from a relatively short person. I also got the tickets for $25, what a steal!
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1">
+                        <img src={first.src} alt="first" class="mb-4 p-4" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="pr-20 pl-20">
+                4. Cherry Blossoms </br>
+                I took this picture on my Olympus XA2 (see more pictures here!) and these types of cherry blossoms are my favourite. This winter felt particularly long and when it was finally getting warm in the city the cherry blossoms started to bloom early-mid May and made the city so, so beautiful. 
+            </div>
+            <div class="flex">
+                <div class="flex-1">
+                    <img src={third.src} alt="third" class="mb-4 p-4" />
+                </div>
+                <div class="flex flex-col flex-1">
+                    <div class="text-right">
+                        5. Peonies </br>
+                        One of my favourite flowers for this season are peonies. Their shape is so unique and they bloom in  in a way that bursts them open and changes their entire shape. I’ve been trying to buy flowers more frequently for my apartment because they brighten and freshen up a space.
+                    </div>
+                    <div class="pt-8">
+                        6. Magdalena Bay - Imaginal Disk </br>
+                        This album I got really into during my finals studying. The intergalactic, airy, electric rhythm of their album is so addicting. In particular, my favourites were “Death & Romance”, “Fear, Sex”, “Vampire in the Corner” , “Love is Everywhere”, and “Cry for Me”. But honestly, it’s a non-skip album for me. 
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <img src={miffy.src} alt="miffy" class="mb-4 p-10" />
+                </div>
+            </div>
+            <div class="text-right orange instrument-sans hover:underline pb-12">
+                <a href="/diary">back to diary entries >></a>
+            </div>
+        </div>
+
+        <div class="lg:hidden flex instrument-serif-italic dark-orange text-2xl">
+            <!-- Left Column -->
+            <div class="flex flex-col flex-1 m-8 space-y-8">
+                <div class="flex">
+                    <img src={second.src} alt="second" class="" />
+                </div>
+                <div class="flex">
+                    2. Peugeot Pepper Mill <br />I’ve recently broken my glass grocery store pepper mill and decided to invest in a nicer, wooden one. It’s a bit of an investment but i know i’ll keep it for a long time! nothing like cooking with a smooth mill for pepper, it’s very satisfying.
+                </div>
+                <div class="flex">
+                    3. Japanese Breakfast/Concerts at Massey Hall <br />
+                    Japanese Breakfast’s concert set for her “For Melancholy Brunettes and Sad Women tour” had an oceanic/sailor theme and it was so beautiful! Massey Hall is one of my favourite venues-- you can see the artist pretty well virtually anywhere you sit. This was my first time standing in the GA area and it was very nice-- and this is coming from a relatively short person. I also got the tickets for $25, what a steal!
+                </div>
+                <div>
+                    <img src={third.src} alt="third" class="mb-4 p-4" />
+                </div>
+                <div class="flex">
+                    6. Magdalena Bay - Imaginal Disk </br>
+                        This album I got really into during my finals studying. The intergalactic, airy, electric rhythm of their album is so addicting. In particular, my favourites were “Death & Romance”, “Fear, Sex”, “Vampire in the Corner” , “Love is Everywhere”, and “Cry for Me”. But honestly, it’s a non-skip album for me. 
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex flex-col flex-1 mr-8 space-y-8">
+                <div class="mt-12">
+                    1. Olympus XA2 Film Camera <br />
+                    I upgraded my Olympus Trip XB AP 44 to a Olympus XA2 after some researching online, and the camera is very nice! I’ve uploaded the pictures I took here, I focused on more still life pictures this time and I think it shows Toronto’s spring in such a beautiful life!
+                </div>
+                <div class="">
+                    <img src={first.src} alt="first" class="mb-4 p-4" />
+                </div>
+                <div>
+                    4. Cherry Blossoms </br>
+                    I took this picture on my Olympus XA2 (see more pictures here!) and these types of cherry blossoms are my favourite. This winter felt particularly long and when it was finally getting warm in the city the cherry blossoms started to bloom early-mid May and made the city so, so beautiful.
+                </div>
+                <div>
+                    5. Peonies </br>
+                    One of my favourite flowers for this season are peonies. Their shape is so unique and they bloom in a way that bursts them open and changes their entire shape. I’ve been trying to buy flowers more frequently for my apartment because they brighten and freshen up a space.
+                </div>
+                <div>
+                    <img src={miffy.src} alt="miffy" class="mb-4 p-10" />
+                </div>
+            </div>
+
+        </div>
+        
+
+        
+        
+    </div>
+    
+</main>
+
+</body>
