@@ -1,0 +1,64 @@
+---
+import "../../../styles/global.css";
+import "../diary.css";
+import '@fontsource/instrument-serif';
+import '@fontsource-variable/noto-serif-kr'
+import '@fontsource-variable/instrument-sans';
+import Navbar from "../../../components/Navbar.astro";
+import image17 from "../../../assets/diary/may-20/image17.jpg";
+import image18 from "../../../assets/diary/may-20/image18.jpg";
+import image19 from "../../../assets/diary/may-20/image19.jpg";
+import image21 from "../../../assets/diary/may-20/image21.jpg";
+import image22 from "../../../assets/diary/may-20/image22.jpg";
+import image23 from "../../../assets/diary/may-20/image23.jpg";
+import image24 from "../../../assets/diary/may-20/image24.jpg";
+import image25 from "../../../assets/diary/may-20/image25.jpg";
+import image26 from "../../../assets/diary/may-20/image26.jpg";
+import image27 from "../../../assets/diary/may-20/image27.jpg";
+import image28 from "../../../assets/diary/may-20/image28.jpg";
+import image29 from "../../../assets/diary/may-20/image29.jpg";
+import banner from "../../../assets/diary/may-20/banner.jpg";
+import BackToDiary from "../../../components/BackToDiary.astro";
+---
+<meta charset="UTF-8">
+<head>
+
+</head>
+<body class="bg-offwhite">
+<Navbar />
+
+<main class="ml-20 mr-20 bg-no-repeat bg-offwhite" style={`background-image: url(${banner.src}); height: 400px;`}>
+<div class="instrument-serif-italic text-6xl pt-60">
+    spring has sprung in toronto and i captured it through my Olympus XA2
+</div>
+<div class="instrument-serif-italic text-gray-500 text-2xl pt-4">
+    may 20, 2025 - toronto, on //
+    film: kodak gold 400 35mm //
+    camera: olympus xa2 //
+    developed at graination
+</div>
+<div class="instrument-serif-italic text-2xl pt-4">
+    i recently upgraded my point-and-shoot camera to the Olympus XA2 with a flash attachment. it was a bit of a trial process of learning how to load the camera properly, but i love how clear and beautiful the pictured turned out. the focus settings were simple but made a huge difference in the pictures. i will saw that the contrast in the background of this film is quite dark, and you can see that i accidentally slightly opened the back of my camera-- i think it still added a nice effect to my pictures!
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 space-x-8 mt-8">
+    <div class="flex flex-col space-y-8">
+        <img src={image22.src} alt="Image 17" class="w-full" />
+        <img src={image23.src} alt="Image 18" class="w-full" />
+        <img src={image26.src} alt="Image 19" class="w-full" />
+        <img src={image29.src} alt="Image 20" class="w-full" />
+        <img src={image19.src} alt="Image 19" class="w-full" />
+        <img src={image18.src} alt="Image 20" class="w-full" />
+    </div>
+    <div class="flex flex-col space-y-8">
+        <img src={image24.src} alt="Image 21" class="w-full" />
+        <img src={image27.src} alt="Image 22" class="w-full" />
+        <img src={image17.src} alt="Image 21" class="w-full" />
+        <img src={image21.src} alt="Image 22" class="w-full" />
+        <img src={image25.src} alt="Image 23" class="w-full" />
+        <img src={image28.src} alt="Image 24" class="w-full" />
+    </div>
+</div>
+<BackToDiary />
+</main>
+
+</body>

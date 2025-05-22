@@ -11,8 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/ibarra-real-nova": "^5.2.5",
     "@fontsource-variable/instrument-sans": "^5.2.5",
     "@fontsource-variable/noto-serif-kr": "^5.2.5",
+    "@fontsource-variable/playfair-display": "^5.2.5",
     "@fontsource/instrument-serif": "^5.2.5",
     "@tailwindcss/vite": "^4.1.6",
     "astro": "^5.7.12",

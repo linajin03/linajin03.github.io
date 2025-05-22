@@ -12,10 +12,10 @@ export const diaryPosts = [
     },
     {
         title: "spring has sprung in toronto and i captured it through my Olympus XA2",
-        date: "2025-04-20", 
+        date: "2025-05-20", 
         subtitle: "sharing some pictures i took around Toronto this spring",
         tags: ["diary", "pictures"],
-        url: "/diaryposts/currently-april-2025",
+        url: "/diaryposts/2025/spring-has-sprung",
         thumbnail: thumbnailMay20,
     },
 
