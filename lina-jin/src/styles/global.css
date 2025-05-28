@@ -92,3 +92,48 @@ p {
     top: 0;
     left: 0;
 }
+
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.side-bar-text {
+    font-family: 'Silkscreen', cursive;
+    font-size: 1.2rem;
+}
+
+.item img {
+    margin: 8px;
+    padding: 8px;
+
+}
+
+.collapsed {
+    display: none;
+}
+
+.silkscreen-regular {
+font-family: "Silkscreen", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.silkscreen-bold {
+font-family: "Silkscreen", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.selected {
+    /* gray color */ background-color: #D3D3D3; /* light gray */
+    border-radius: 8px; /* Optional: rounded corners for the selected item */
+}
+
+.selected-text {
+    background-color: #2084ff;
+    color: white;
+    border-radius: 5px;
+}
