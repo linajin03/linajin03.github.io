@@ -178,6 +178,8 @@ font-style: normal;
 
 .animate-fadeInUp {
     animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 300ms;
+    opacity: 0;
 }
 
 
