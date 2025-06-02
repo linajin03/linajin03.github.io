@@ -18,12 +18,20 @@ export const fileStructure = [
               description: "Logo image file.",
               content: "base64 or URL path",
             },
+            // {
+            //   name: "project1.txt",
+            //   type: "file",
+            //   img: "/assets/document.png",
+            //   description: "Blog post about project 1.",
+            //   content: "Details about project 1",
+            // },
             {
-              name: "project1.txt",
-              type: "file",
-              img: "/assets/document.png",
+              name: "website",
+              type: "link",
+              img: "/assets/link.png",
               description: "Blog post about project 1.",
               content: "Details about project 1",
+              url: "https://tycelm.github.io/track-the-crowd/"
             },
           ],
         },
@@ -34,11 +42,12 @@ export const fileStructure = [
           description: "My senior research capstone report (AMS312, American Studies: Asian-American Tech Dynamics). In this study, I attempted to analyze the root of the public discomfort around feminism and how this has impacted the public expression of feminism on Korean online platforms, specifically YouTube. I conducted a document research analysis and a sentiment-opinion analysis on comments of specific Korean YouTube videos that discuss Korean feminism.",
           children: [
             {
-              name: "logo.png",
-              type: "file",
+              name: "report.pdf",
+              type: "link",
               img: "/assets/document.png",
-              description: "Logo image file.",
-              content: "base64 or URL path",
+              description: "Full report on Korean feminism.",
+              content: "/projects/ams312",
+              url: "/pages/projects/ams312"
             },
           ],
         },

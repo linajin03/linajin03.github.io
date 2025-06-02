@@ -187,6 +187,9 @@ import { fileStructure } from '../data/projects.js';
                     const newPath = navigationStack[currentIndex]?.path + '/' + item.name;
                     navigateToFolder(item.children, newPath);
                 }
+                else if (item.type === 'link') {
+                    window.location.href = item.url;
+                }
                 // Update content display
                 const contentDisplay = document.getElementById('content-display');
                 if (contentDisplay) {
@@ -198,6 +201,22 @@ import { fileStructure } from '../data/projects.js';
             container.appendChild(div);
         });
     }
+
+    // // function to load new page content when a file is clicked
+    // function loadFileContent(item) {
+    //     const contentDisplay = document.getElementById('content-display');
+    //     contentDisplay.innerHTML = '';
+
+    //     if (item.type === 'link') {
+    //         const linkElement = document.createElement('a');
+    //         linkElement.href = item.url;
+    //         linkElement.target = '_blank';
+    //         linkElement.textContent = `Open ${item.name}`;
+    //         contentDisplay.appendChild(linkElement);
+    //     } else {
+    //         updateContentDisplay(item);
+    //     }
+    // }
 
     function updateContentDisplay(item) {
         const contentDisplay = document.getElementById('content-display');
