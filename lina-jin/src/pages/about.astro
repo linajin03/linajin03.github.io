@@ -1,0 +1,187 @@
+---
+import Navbar from '../components/Navbar.astro';
+import "../styles/global.css";
+import '@fontsource/instrument-serif';
+import '@fontsource-variable/noto-serif-kr'
+import '@fontsource-variable/instrument-sans';
+import '@fontsource-variable/eb-garamond';
+import '@fontsource/im-fell-great-primer/400-italic.css';
+import '@fontsource/im-fell-great-primer';
+import image1 from '../assets/about/1.png';
+import image2 from '../assets/about/2.png';
+import image3 from '../assets/about/3.png';
+import image4 from '../assets/about/4.png';
+import image5 from '../assets/about/5.png';
+import image6 from '../assets/about/6.png';
+import image7 from '../assets/about/7.jpg';
+import image8 from '../assets/about/8.jpg';
+import image9 from '../assets/about/9.png';
+import image10 from '../assets/about/10.png';
+import image11 from '../assets/about/11.png';
+import image12 from '../assets/about/12.jpg';
+import image13 from '../assets/about/13.png';
+import image14 from '../assets/about/14.png';
+
+---
+<meta charset="UTF-8">
+<head>
+
+</head>
+<body class="">
+<Navbar />
+<main class="bg-offwhite">
+    <div class="lg:ml-50 lg:mr-50 mr-20 flex light-blue items-center justify-center animate-fadeInUp [animation-delay:600ms]">
+        <img src={image1.src} alt="Lina Jin's portrait" class="w-1/2 object-contain p-16" />
+        <div class="flex flex-col">
+            <div class="im-fell-italic bold text-6xl w-1/2">
+                about me
+            </div>
+            <div class="text-xl pt-4">
+                My degree and resume will tell you I am a computer scientist and statistician. I pursued this path because I fell in love with harnessing data and technology to defy boundaries and make a global impact on our world. Beyond this, I am an artist, homecook, bookworm, storyteller, and leader.
+            </div>
+            <div class="text-xl pt-4">
+                Through my all experiences, I found that innovation thrives on creativity, collaboration, connection, and exploration. As I continue forward, I am driven to lead and make a difference.
+            </div>
+        </div>
+    </div>
+    <div class="bg-[url('../assets/about/bkg.jpg')] lg:pl-60 lg:pr-60 text-white items-center justify-center bg-fixed">
+        <div class="im-fell-italic bold text-7xl pt-24 text-right">
+            finding my path
+        </div>
+        <div class="flex space-x-12 pt-10 fade-up">
+            <div class="flex flex-col flex-1">
+            <div class="im-fell-italic bold text-4xl ">
+                georgia on my mind..
+            </div>
+            <img src={image2.src} alt="" class="mt-10 object-contain" />
+            </div>
+            <div class="text-2xl pt-4 flex-1 im-fell-italic tracking-widest">
+            i lived in georgia most of my life. growing up, i always found ways to express myself through art and community. i found creativity and iniative through every nook and cranny and joined every club possible. so when i moved to toronto, my heart was set on doing the same.
+            </div>
+            <div class="hidden lg:flex-1 lg:flex items-center">
+            <img src={image3.src} alt="" class="object-contain " />
+            </div>
+        </div>
+        <div class="fade-up">
+
+            <div class="flex space-x-12 pt-10">
+                <div class="flex flex-col flex-2">
+                    <div class="flex">
+                        <div class="flex-1">
+                            <img src={image5.src} alt="" class="mt-10 object-contain" />
+                        </div>
+                        <div class="flex flex-col flex-1">
+                            <div class="im-fell-italic bold text-4xl">
+                                leading STEM workshops for kids in the GTA..
+                            </div>
+                            <div class="im-fell-italic bold text-4xl p-10 text-right">
+                                my first hackathon: shehacks +7 at western
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-fell-italic text-2xl im-fell-italic tracking-widest p-10">
+                        I think the best part of my journey so far has been the people I have met along the way, who I get to help and learn from.
+                    </div>
+                </div>
+                <div class="flex flex-col flex-1">
+                    <div class="im-fell-italic bold text-8xl text-right">
+                        2022
+                    </div>
+                    <img src={image4.src} alt="" class="mt-10 object-contain" />
+                </div>
+        </div>
+
+        <div class="fade-up">
+            <div class="im-fell-italic bold text-8xl">
+                2023
+            </div>
+            <div class="flex">
+                <div class="flex-1">
+                    <img src={image6.src} alt="" class="mt-10 object-contain" />
+                </div>
+                <div class="flex flex-col flex-2">
+                    <div class="flex">
+                        <div class="flex flex-col flex-1 p-10">
+                            <div class="im-fell-italic bold text-4xl">
+                                my 8-mo internship with the ministry of children, community, and social services
+                            </div>
+                            <img src={image7.src} alt="" class="mt-10 object-contain" />
+                        </div>
+                        <div class="flex-1">
+                            <img src={image8.src} alt="" class="mt-10 object-contain" />
+                        </div>
+                    </div>
+                    <div class="im-fell-italic bold text-4xl">
+                        co-founded UofT’s first data science club
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="im-fell-italic bold text-8xl">
+                2024
+            </div>
+            <div class="flex">
+                <div class="flex-1 flex flex-col">
+                    <img src={image9.src} alt="" class="mt-10 object-contain" />
+                    <div class="im-fell-italic bold text-4xl p-10">
+                        organized the 2-day WISE National Conference with 500+ attendees
+                    </div>
+                    <div class="im-fell-italic bold text-4xl p-10 text-right">
+                        won best the best business value award for our POC!
+                    </div>
+                </div>
+                <div class="flex flex-col flex-2">
+                    <img src={image10.src} alt="" class="object-contain p-10" />
+                </div>
+            </div>
+        </div>
+
+        <div class="fade-up">
+            <div class="im-fell-italic bold text-8xl">
+                2025
+            </div>
+            <div class="flex">
+                <div class="flex-1 flex flex-col p-10">
+                    <div class="im-fell-italic bold text-4xl p-10">
+                        created UofT’s first datathon
+                    </div>
+                    <img src={image11.src} alt="" class="mt-4 object-contain" />
+                    <div class="im-fell-italic text-2xl im-fell-italic tracking-widest p-10">
+                        throughout all of this, i am constantly learning new things and collaborating with others.
+                    </div>
+                    <div class="im-fell-italic text-2xl im-fell-italic tracking-widest text-right">
+                        and now, freshly graduated, i am thrilled to continue harbouring my skills and make a ripple in my community and beyond.
+                    </div>
+                </div>
+                <div class="flex-1 flex flex-col p-10">
+                    <div class="im-fell-italic bold text-4xl p-10">
+                        brought 10+ data-centred events to UofT with over 300 attendees in total
+                    </div>
+                    <img src={image12.src} alt="" class="mt-4 object-contain" />
+                    <img src={image13.src} alt="" class="mt-4 object-contain" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-up').forEach((element) => {
+      observer.observe(element);
+    });
+  });
+</script>

@@ -137,3 +137,57 @@ font-style: normal;
     color: white;
     border-radius: 5px;
 }
+
+.eb-garamond {
+    font-family: 'EB Garamond', serif;
+}
+
+.eb-garamond-italic {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+.light-blue {
+    color: #809ABE;
+}
+
+.im-fell {
+    font-family: 'IM Fell Great Primer', serif;
+}
+
+.im-fell-italic {
+    font-family: 'IM Fell Great Primer', serif;
+    font-style: italic;
+}
+
+.bg-fixed {
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

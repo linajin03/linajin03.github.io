@@ -140,7 +140,7 @@ import { fileStructure } from '../data/projects.js';
             div.className = 'item flex flex-col p-2 cursor-pointer';
             
             const img = document.createElement('img');
-            img.src = item.type === 'folder' ? folderIcon : fileIcon;
+            img.src = item.type === 'folder' ? folderIcon : item.img;
             img.alt = item.type;
             img.className = item.type === 'folder' ? 'w-32 h-auto' : 'w-24 h-auto';
 
@@ -205,7 +205,7 @@ import { fileStructure } from '../data/projects.js';
 
         const imageElement = document.createElement('img');
         imageElement.className = 'w-auto h-auto mb-4 pl-16 pr-16';
-        imageElement.src = item.type === 'folder' ? folderIcon : fileIcon;
+        imageElement.src = item.img;
         
         const textElement = document.createElement('p');
         const itemName = document.createElement('p');
