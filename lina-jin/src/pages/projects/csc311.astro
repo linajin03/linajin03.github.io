@@ -1,0 +1,25 @@
+---
+import "../../styles/global.css";
+import "@fontsource/instrument-serif";
+import "@fontsource-variable/noto-serif-kr";
+import "@fontsource-variable/instrument-sans";
+import "@fontsource/im-fell-great-primer/400-italic.css";
+import "@fontsource/im-fell-great-primer";
+import file from "../../assets/projects/ams312-final.pdf";
+import Navbar from "../../components/Navbar.astro";
+---
+
+<meta charset="UTF-8" />
+<head>
+    <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml" />
+</head>
+<body class="bg-offwhite">
+    <Navbar />
+    <main class="ml-20 mr-20 bg-offwhite">
+        <embed 
+        src={file}
+        type="application/pdf"
+        class="w-full h-screen"
+        />
+    </main>
+</body>

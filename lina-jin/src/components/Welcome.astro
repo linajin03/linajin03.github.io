@@ -19,13 +19,13 @@ const navItems = [
 
 <div id="container" class="min-h-screen">
 	<main
-		class="min-h-screen flex items-start justify-start lg:pt-20 lg:pr-40 lg:pl-40 pr-20 pl-20"
+		class="min-h-screen flex items-start justify-start lg:pt-20 lg:pr-40 lg:pl-40 mr-10 pl-15"
 	>
 		<div class="flex flex-col animate-fadeInUp [animation-delay:600ms]">
 			<div class="flex">
 				<div class="lg:w-3/4">
 					<div class="name-section orange">
-						<div class="flex flex-col lg:flex-row h-32">
+						<div class="flex flex-col hidden lg:flex lg:flex-row h-32">
 							<div class="name flex items-center">
 								<h1 class="instrument-serif">Lina Jin</h1>
 							</div>
@@ -61,13 +61,49 @@ const navItems = [
 						<div class="flex">
 							<div class="flex flex-col">
 								<div
-									class="lg:hidden block blue text-5xl instrument-sans-italic w-2/3 pt-70"
+									class="flex flex-col lg:hidden orange h-32"
 								>
-									hi, my name is <span class="im-fell-italic"
-										>lina!</span>
+									<div class="name flex items-center">
+										<h1 class="instrument-serif">
+											Lina Jin
+										</h1>
+									</div>
+									<div
+										class="flex flex-col mt-6 ml-8 lg:text-2xl text-5xl h-full justify-center"
+									>
+										<div class="flex">
+											<div class="font-korean">
+												진 陳
+											</div><div class="im-fell-italic">
+												(jeen) - truth
+											</div>
+										</div>
+										<div class="flex">
+											<div class="font-korean">
+												리 梨
+											</div><div class="im-fell-italic">
+												(lee) - pear blossom, purity and
+												elegance
+											</div>
+										</div>
+										<div class="flex">
+											<div class="font-korean">
+												나 那
+											</div><div class="im-fell-italic">
+												(nah) - graceful
+											</div>
+										</div>
+									</div>
 								</div>
 								<div
-									class="lg:hidden block blue text-5xl instrument-sans-italic  mt-4"
+									class="lg:hidden block blue text-5xl instrument-sans-italic w-2/3 pt-90"
+								>
+									hi, my name is <span class="im-fell-italic"
+										>lina!</span
+									>
+								</div>
+								<div
+									class="lg:hidden block blue text-5xl instrument-sans-italic mt-8 mr-6"
 								>
 									i am a <span class="im-fell-italic"
 										>developer</span
@@ -92,9 +128,9 @@ const navItems = [
 							<img
 								src={photobooth.src}
 								alt="Photobooth"
-								class="lg:hidden block object-cover pt-50"
+								class="lg:hidden block object-cover w-full pt-20"
 							/>
-							<div class="flex flex-col text-xl ml-12">
+							<div class="flex flex-col text-2xl ml-12">
 								<div class="hidden lg:block blue pt-16">
 									hi, my name is <span class="im-fell-italic"
 										>lina!</span
