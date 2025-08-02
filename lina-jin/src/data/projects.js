@@ -113,7 +113,24 @@ export const fileStructure = [
           img: "/assets/rbc.png",
           date: "",
           description: "In the summer of 2024, I worked as a developer in RBC Amplify.",
-          children: []
+          children: [
+            {
+              name: "website",
+              type: "link",
+              img: "/assets/link.png",
+              description: "RBC Amplify 2024 video",
+              content: "Link to the RBC Amplify 2024 video",
+              url: "https://youtu.be/FOZdlPCl4As?si=Yr-FzZlOR9dZaTZm"
+            },
+            {
+              name: "report.pdf",
+              type: "file",
+              img: "/assets/document.png",
+              description: "RBC Amplify 2024 report",
+              content: "Post about my experience at RBC Amplify 2024",
+              url: ""
+            }
+          ]
         },
         {
           name: "MCCSS",
