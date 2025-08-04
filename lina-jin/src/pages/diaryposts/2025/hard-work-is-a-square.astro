@@ -1,0 +1,44 @@
+---
+import "../../../styles/global.css";
+import "../diary.css";
+import '@fontsource/instrument-serif';
+import '@fontsource-variable/noto-serif-kr'
+import '@fontsource-variable/instrument-sans';
+import '@fontsource/im-fell-great-primer/400-italic.css';
+import '@fontsource/im-fell-great-primer';
+import Navbar from "../../../components/Navbar.astro";
+import image1 from "../../../assets/diary/square/image1.jpg";
+import BackToDiary from "../../../components/BackToDiary.astro";
+---
+
+<style>
+  .float-wrap {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 1.5rem;
+  }
+</style>
+
+<body class="bg-offwhite">
+  <Navbar />
+
+  <div class="max-w-3xl mx-auto text-justify leading-relaxed p-6">
+    <!-- Floated image -->
+    <div class="float-wrap">
+      <img src={image1.src} alt="Wrapped image" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Flowing paragraph -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet,
+      adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue,
+      euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+      Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat
+      libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. 
+      Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae...
+    </p>
+  </div>
+
+  <BackToDiary />
+</body>
