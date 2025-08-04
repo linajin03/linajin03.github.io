@@ -1,0 +1,41 @@
+---
+import "../../styles/global.css";
+import "@fontsource/instrument-serif";
+import "@fontsource-variable/noto-serif-kr";
+import "@fontsource-variable/instrument-sans";
+import "@fontsource/im-fell-great-primer/400-italic.css";
+import "@fontsource/im-fell-great-primer";
+import Navbar from "../../components/Navbar.astro";
+---
+
+<meta charset="UTF-8" />
+<head>
+</head>
+<body class="bg-offwhite">
+    <Navbar />
+    <main class="ml-20 mr-20 bg-offwhite">
+        <div>
+            <div class="im-fell-italic bold text-6xl pt-10">
+                Track the Crowd
+            </div>
+            <div class="text-2xl pt-4 im-fell-italic">
+                Tools used: Arduino, 3D Printing (Fusion + Bambu Lab), Python (YOLOv8)
+            </div>
+            <div class="text-xl pt-4 pb-4 im-fell">
+                CSC490: Physical Computing for Interactive Experiences
+            </div>
+            
+        </div>
+        <div class="w-1/2">
+            <div class="text-xl pt-4 pb-4 im-fell">
+            This semester, I had the opportunity to work with Joshua Li, Noelle Ransom, and Maksym Woychyshyn on our Capstone Design Project, focused on physical computing for interactive experiences in social good.
+            </div>
+            <div class="text-xl pt-4 pb-4 im-fell">
+                Our project aimed to reduce subway congestion by installing a camera at the platform level to monitor how full each subway car is as it departs. 
+            </div>
+            <div class="text-xl pt-4 pb-4 im-fell">
+                Using an image recognition model YOLOv8, we detect crowd density in each car and communicate this in real-time to passengers via an Arduino-powered LED panel.
+            </div>
+        </div>
+    </main>
+</body>

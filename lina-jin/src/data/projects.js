@@ -18,13 +18,14 @@ export const fileStructure = [
               description: "Logo image file.",
               content: "base64 or URL path",
             },
-            // {
-            //   name: "project1.txt",
-            //   type: "file",
-            //   img: "/assets/document.png",
-            //   description: "Blog post about project 1.",
-            //   content: "Details about project 1",
-            // },
+            {
+              name: "project1.txt",
+              type: "link",
+              img: "/assets/document.png",
+              description: "Blog post about CSC490 Capstone Project.",
+              content: "/projects/csc490",
+              url: "/projects/csc490"
+            },
             {
               name: "website",
               type: "link",
@@ -59,10 +60,10 @@ export const fileStructure = [
           children: [
             {
               name: "report.pdf",
-              type: "file",
+              type: "link",
               img: "/assets/document.png",
-              description: "Logo image file.",
-              content: "base64 or URL path",
+              description: "Final report for the project.",
+              content: "/projects/csc311",
               url: "/projects/csc311",
             },
           ],
