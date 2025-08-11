@@ -1,0 +1,939 @@
+---
+import "@fontsource/instrument-serif";
+import "@fontsource-variable/instrument-sans";
+import image1 from "../assets/eventbrite/image.png";
+import thumbnail from "../assets/eventbrite/thumbnail.png";
+import resume from "../assets/eventbrite/resume.pdf";
+
+export interface Props {
+    title?: string;
+    subtitle?: string;
+}
+
+const {
+    title = "INVITED: Lina Jin's Career Showcase",
+    subtitle = "Projects, lessons, and insider insight to my career journey ",
+} = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <style>
+            @import "tailwindcss";
+            ul {
+                list-style-type: disc;
+                padding-left: 1.5rem;
+            }
+
+            :root {
+                --ink: #1e0a3c; /* slate-900 */
+                --muted: #6b7280; /* slate-500 */
+                --line: #e5e7eb; /* slate-200 */
+                --bg: #ffffff; /* slate-50 */
+                --card: #ffffff;
+                --accent: #d1410c; /* sky-500 */
+                --contact-accent: #3659e3;
+                --radius: 14px;
+                --contact-bg: #f3f4f6; /* slate-100 */
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                font-family:
+                    Inter,
+                    system-ui,
+                    -apple-system,
+                    Segoe UI,
+                    Roboto,
+                    Helvetica,
+                    Arial;
+                color: var(--ink);
+                background: var(--bg);
+            }
+
+            aside {
+                position: sticky;
+                top: 0;
+                transition:
+                    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.7s;
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            aside.slide-up {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .bar {
+                border-bottom: 1px solid var(--line);
+                background: var(--card);
+            }
+            .bar-inner {
+                margin: 0 auto;
+                padding: 12px 16px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+            .brand {
+                font-weight: 800;
+                text-decoration: none;
+                color: var(--ink);
+            }
+            .spacer {
+                flex: 1;
+            }
+            .btn {
+                appearance: none;
+                border: 1px solid var(--line);
+                background: var(--card);
+                padding: 10px 12px;
+                border-radius: 4px;
+                font-weight: 400;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.2s ease;
+            }
+            .btn:hover {
+                border-color: #d1d5db;
+                transform: translateY(-1px);
+            }
+            .btn-accent {
+                background: var(--accent);
+                border-color: var(--accent);
+                color: #fff;
+            }
+
+            .btn-accent-contact {
+                background: var(--contact-accent);
+                border-color: var(--contact-accent);
+                color: #fff;
+            }
+
+            .btn-accent:hover {
+                background: #b91c1c;
+                border-color: #b91c1c;
+            }
+
+            .hero {
+                background: var(--card);
+            }
+            .hero-inner {
+                margin: 0 auto;
+                display: grid;
+                gap: 18px;
+                align-items: start;
+            }
+            .cover {
+                aspect-ratio: 16/9;
+                border-radius: var(--radius);
+                background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+            }
+            .h-title {
+                font-size: 28px;
+                line-height: 1.2;
+                margin: 4px 0 6px;
+                font-weight: 800;
+            }
+            .h-sub {
+                color: var(--muted);
+                font-size: 14px;
+                margin: 0;
+            }
+            .meta {
+                display: flex;
+                gap: 16px;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+            /* Layout */
+            .wrap {
+                align-items: start;
+                margin: 0 auto;
+                padding: 18px 16px;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 18px;
+            }
+            .card {
+                background: var(--card);
+                border-radius: var(--radius);
+                margin-bottom: 18px;
+            }
+            .contact-card {
+                background: var(--contact-bg);
+                border-radius: var(--radius);
+                margin-bottom: 18px;
+            }
+
+            .ticket-card {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: var(--radius);
+                padding: 16px;
+                margin-bottom: 18px;
+                margin-top: 18px;
+            }
+            .hd {
+                font-weight: 800;
+                margin-top: 20px;
+            }
+            .bd {
+                color: var(--muted);
+                margin-top: 6px;
+            }
+
+            .list {
+                margin: 0;
+                padding-left: 18px;
+            }
+            .list li {
+                margin: 6px 0;
+            }
+
+            .small {
+                font-size: 14px;
+                color: var(--muted);
+            }
+
+            .contact {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+
+            /* Timeline Styles */
+            .timeline {
+                position: relative;
+                padding: 20px 0;
+            }
+
+            .timeline::before {
+                content: "";
+                position: absolute;
+                left: 24px;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background: var(--line);
+            }
+
+            .timeline-item {
+                position: relative;
+                padding-left: 60px;
+                margin-bottom: 32px;
+            }
+
+            .timeline-dot {
+                position: absolute;
+                left: 16px;
+                top: 8px;
+                width: 16px;
+                height: 16px;
+                background: var(--accent);
+                border: 3px solid var(--card);
+                border-radius: 50%;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 2;
+            }
+
+            .timeline-content {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: var(--radius);
+                padding: 16px;
+                transition: all 0.2s ease;
+                position: relative;
+            }
+
+            .timeline-content:hover {
+                border-color: var(--accent);
+                box-shadow: 0 4px 12px rgba(209, 65, 12, 0.1);
+                transform: translateX(4px);
+            }
+
+            .timeline-date {
+                background: var(--accent);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 600;
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            .timeline-title {
+                font-size: 18px;
+                font-weight: 700;
+                margin: 0 0 4px;
+                color: var(--ink);
+            }
+
+            .timeline-org {
+                color: var(--accent);
+                font-weight: 600;
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            .timeline-desc {
+                color: var(--muted);
+                margin-bottom: 12px;
+                line-height: 1.5;
+            }
+
+            .skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .skill-tag {
+                background: var(--bg);
+                border: 1px solid var(--line);
+                padding: 3px 8px;
+                border-radius: 12px;
+                font-size: 12px;
+                color: var(--muted);
+                font-weight: 500;
+            }
+
+            .skill-tag:hover {
+                background: var(--accent);
+                color: white;
+                border-color: var(--accent);
+            }
+
+            /* Stats Grid */
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                margin-top: 18px;
+            }
+
+            .stat-card {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: var(--radius);
+                padding: 16px;
+                text-align: center;
+                transition: all 0.2s ease;
+            }
+
+            .stat-card:hover {
+                border-color: var(--accent);
+                transform: translateY(-2px);
+            }
+
+            .stat-number {
+                font-size: 24px;
+                font-weight: 800;
+                color: var(--accent);
+                display: block;
+                margin-bottom: 4px;
+            }
+
+            .stat-label {
+                color: var(--muted);
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            @media (max-width: 900px) {
+                .hero-inner {
+                    grid-template-columns: 1fr;
+                }
+                .wrap {
+                    grid-template-columns: 1fr;
+                }
+                .timeline::before {
+                    left: 16px;
+                }
+                .timeline-item {
+                    padding-left: 44px;
+                }
+                .timeline-dot {
+                    left: 8px;
+                }
+                .stats-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Top bar -->
+        <header class="bar">
+            <div class="bar-inner">
+                <a
+                    class="brand"
+                    href="https://www.linaj.in"
+                    style="color: #d1410c">linaj.in</a
+                >
+                <div class="spacer"></div>
+                <a class="btn" href="https://www.linaj.in">Portfolio</a>
+                <a class="btn" href="https://www.linkedin.com/in/jin-lina/">LinkedIn</a>
+                <a class="btn btn-accent" href="/assets/resume.pdf"target="_blank" rel="noopener noreferrer"
+                    >Resume</a
+                >
+            </div>
+        </header>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="">
+                <div
+                    class="cover"
+                    style="
+                        aspect-ratio: 2 / 1;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #f3f4f6;
+                        border-radius: 0.5rem;
+                        margin-top : 20px;
+                    "
+                >
+                    <img
+                        src={thumbnail.src}
+                        alt="thumbnail"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                    />
+                </div>
+            </div>
+
+            <main class="wrap">
+                <article class="pr-4">
+                    <div class="card">
+                        <section class="hero">
+                            <div class="hero-inner">
+                                <div>
+                                    <p class="small">2025</p>
+                                    <h1 class="h-title">{title}</h1>
+                                    <p class="h-sub text-md">{subtitle}</p>
+                                    <div class="meta">
+                                        <span
+                                            >📍 Atlanta, Georgia (but anywhere,
+                                            really)</span
+                                        >
+                                        <span>🎟️ Free</span>
+                                    </div>
+                                    <div style="height:12px"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="hd mt-10">About this event</div>
+                        <div class="bd">
+                            <div class="body">
+                                Join me for an interactive showcase of my
+                                professional journey - from University of
+                                Toronto CS/Statistics student to award-winning software
+                                developer. Discover projects that generated
+                                millions in revenue, AI/machine learning innovations, and
+                                leadership experiences that shaped my career,
+                                which I am eager to apply to Eventbrite as a Software Engineer I.
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    How I built award-winning fintech solutions
+                                    at RBC ($20K prize)
+                                </li>
+                                <li>
+                                    Real-time AI systems for public transit
+                                    optimization
+                                </li>
+                                <li>
+                                    From healthcare digitization to financial
+                                    platforms
+                                </li>
+                                <li>
+                                    Continuously learning, growing, and applying my skills and experiences, along with collaborating with others
+                                </li>
+                                <li>
+                                    Leading 200+ member data science community
+                                    at UofT and planning events for 500+ STEM students
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section
+                        class="contact-card"
+                        style="display: flex; align-items: center; padding: 18px;"
+                    >
+                        <img
+                            src={image1.src}
+                            alt="Lina Jin"
+                            style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-right: 18px;"
+                        />
+                        <div>
+                            <div style="font-size: 16px;">By: Lina Jin</div>
+                            <div style="color: var(--muted); font-size: 14px;">
+                                Computer Science & Statistics @ UofT
+                            </div>
+                        </div>
+                        <a
+                            class="btn btn-accent-contact"
+                            href="mailto:jinlina91@gmail.com"
+                            style="margin-left: auto">Get in touch</a
+                        >
+                    </section>
+
+                    <!-- Professional Journey Timeline -->
+                    <div class="card">
+                        <div class="hd">Professional Journey</div>
+                        <div class="bd">
+                            <div class="timeline">
+                                <!-- Education -->
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >September 2021 - June 2025</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Honours Bachelor of Science with
+                                            Distinction
+                                        </h3>
+                                        <p class="timeline-org">
+                                            University of Toronto
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Double Major in Computer Science and
+                                            Statistical Sciences, building
+                                            expertise in software engineering,
+                                            machine learning, and data analysis.
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag"
+                                                >Computer Science</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Statistics</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Machine Learning</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Algorithms</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >May 2023 - Dec 2023</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Business Analyst Co-op
+                                        </h3>
+                                        <p class="timeline-org">
+                                            Ministry of Children, Community &
+                                            Social Services, Ontario Public Service
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Led digitization of Ontario
+                                            healthcare systems, migrating legacy
+                                            systems to modern web apps.
+                                            Conducted user testing with 10+
+                                            agencies and automated PDF
+                                            generation.
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag"
+                                                >System Migration</span
+                                            >
+                                            <span class="skill-tag"
+                                                >User Testing</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Healthcare IT</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Process Automation</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >Aug 2023 - May 2024</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Conference Operations
+                                        </h3>
+                                        <p class="timeline-org">
+                                            Women in Science and Engineering
+                                            UofT
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Provided advising and resources to
+                                            500+ STEM students within the GTA
+                                            through involvement in planning and
+                                            execution of the annual conference
+                                            involving workshops, networking
+                                            opportunities, and speaker events.
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag"
+                                                >Leadership</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Event Management</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Web Development</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Community Building</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >Aug 2023 - May 2025</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Co-President & Co-Founder
+                                        </h3>
+                                        <p class="timeline-org">
+                                            Students in Data Science and
+                                            Statistics (SDSS) UofT
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Leading 25+ executives and 200+
+                                            members. Organized UofT's first
+                                            datathon with 100+ attendees and
+                                            developed club website for enhanced
+                                            engagement.
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag"
+                                                >Leadership</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Event Management</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Web Development</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Community Building</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >May 2024 - Aug 2024</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Software Developer Intern
+                                        </h3>
+                                        <p class="timeline-org">
+                                            RBC Amplify Internship Program
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Created end-to-end mortgage
+                                            application system with 2%
+                                            conversion increase and $11.5MM
+                                            projected revenue. Won Overall Best
+                                            Business Value Award ($20,000) using
+                                            GPT-2 fine-tuning.
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag">RAFT</span>
+                                            <span class="skill-tag">Python</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Product Development</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Fintech</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Projects -->
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >Jan 2025 - April 2025</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Track The Crowd: AI Crowd Detection
+                                        </h3>
+                                        <p class="timeline-org">
+                                            CSC490 Capstone w/ Toronto Transit
+                                            Commission
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Developing real-time computer vision
+                                            system for TTC subway crowd
+                                            detection using CNNs and camera
+                                            sensors to optimize boarding
+                                            efficiency.
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag"
+                                                >Computer Vision</span
+                                            >
+                                            <span class="skill-tag">CNNs</span>
+                                            <span class="skill-tag"
+                                                >Real-time Systems</span
+                                            >
+                                            <span class="skill-tag"
+                                                >Public Transit</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date"
+                                            >February 2025 - March 2025</span
+                                        >
+                                        <h3 class="timeline-title">
+                                            Food Prediction Project
+                                        </h3>
+                                        <p class="timeline-org">
+                                            CSC311 (Introduction to Machine
+                                            Learning) Course Project
+                                        </p>
+                                        <p class="timeline-desc">
+                                            Developed a machine learning model
+                                            from scratch leveraging decision
+                                            trees, regression, Naïve Bayes, and
+                                            neural networks to predict food
+                                            items based on 2,000+ survey
+                                            responses, achieving a 80.18%
+                                            prediction accuracy
+                                        </p>
+                                        <div class="skills">
+                                            <span class="skill-tag"
+                                                >Machine Learning</span
+                                            >
+                                            <span class="skill-tag">CNNs</span>
+                                            <span class="skill-tag"
+                                                >Statistics</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="">
+                    <!-- RSVP Card -->
+                    <section
+                        class="ticket-card"
+                        style="display: flex; justify-content: space-between; align-items: center; padding: 16px;"
+                    >
+                        <div>
+                            <div style="font-size: 16px;">🎟️ Free</div>
+                            <div style="color: var(--muted); font-size: 14px;">
+                                Always free to talk and connect!
+                            </div>
+                        </div>
+                        <a
+                            class="btn btn-accent"
+                            href="mailto:jinlina91@gmail.com">RSVP</a
+                        >
+                    </section>
+
+                    <!-- Stats Showcase -->
+                    <section class="card">
+                        <div class="hd">Career Highlights</div>
+                        <div class="bd">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <span class="stat-number">$11.5M</span>
+                                    <p class="stat-label">Revenue Impact</p>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">700+</span>
+                                    <p class="stat-label">
+                                        Community Members Lead
+                                    </p>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">12+</span>
+                                    <p class="stat-label">
+                                        Months of Work Experience
+                                    </p>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number">15+</span>
+                                    <p class="stat-label">Tech Skills</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Skills Overview -->
+                    <section class="card">
+                        <div class="hd">Technical Skills</div>
+                        <div class="bd">
+                            <div style="margin-bottom: 12px;">
+                                <div
+                                    style="font-weight: 600; margin-bottom: 6px; color: var(--ink);"
+                                >
+                                    Languages
+                                </div>
+                                <div class="skills">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">C</span>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 12px;">
+                                <div
+                                    style="font-weight: 600; margin-bottom: 6px; color: var(--ink);"
+                                >
+                                    Frameworks
+                                </div>
+                                <div class="skills">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Angular</span>
+                                    <span class="skill-tag">Flask</span>
+                                    <span class="skill-tag">PyTorch</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-weight: 600; margin-bottom: 6px; color: var(--ink);"
+                                >
+                                    Cloud & Tools
+                                </div>
+                                <div class="skills">
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Data Science</span>
+                                    <span class="skill-tag"
+                                        >Machine Learning</span
+                                    >
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">Elasticsearch</span>
+                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">Agile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </main>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Enhanced timeline interactions
+                const timelineItems =
+                    document.querySelectorAll(".timeline-content");
+                timelineItems.forEach((item, index) => {
+                    item.addEventListener(
+                        "mouseenter",
+                        function (this: HTMLElement) {
+                            this.style.transform = "translateX(8px)";
+                            this.style.boxShadow =
+                                "0 8px 24px rgba(209, 65, 12, 0.15)";
+                        },
+                    );
+
+                    item.addEventListener(
+                        "mouseleave",
+                        function (this: HTMLElement) {
+                            this.style.transform = "translateX(0)";
+                            this.style.boxShadow = "none";
+                        },
+                    );
+                });
+
+                const observerOptions = {
+                    threshold: 0.5,
+                    rootMargin: "0px 0px -50px 0px",
+                };
+
+                const statsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const statCards =
+                                entry.target.querySelectorAll(".stat-card");
+                            statCards.forEach((card, index) => {
+                                setTimeout(() => {
+                                    card.addEventListener(
+                                        "mouseenter",
+                                        function (this: HTMLElement) {
+                                            this.style.boxShadow =
+                                                "0 8px 24px rgba(209, 65, 12, 0.15)";
+                                            this.style.borderColor =
+                                                "var(--accent)";
+                                        },
+                                    );
+
+                                    card.addEventListener(
+                                        "mouseleave",
+                                        function (this: HTMLElement) {
+                                            this.style.boxShadow = "none";
+                                            this.style.borderColor =
+                                                "var(--line)";
+                                        },
+                                    );
+                                }, index * 100);
+                            });
+                        }
+                    });
+                }, observerOptions);
+
+                const statsGrid = document.querySelector(".stats-grid");
+                if (statsGrid) {
+                    statsObserver.observe(statsGrid);
+                }
+            });
+            setTimeout(() => {
+                const aside = document.querySelector("aside");
+                if (aside) {
+                    aside.classList.add("slide-up");
+                }
+            }, 800);
+        </script>
+    </body>
+</html>
